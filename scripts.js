@@ -16,8 +16,8 @@ function getGameData(){
         }
     })
     .then((response) => response.json())
-    .then(response => {
-        console.log(response);
+    .then((obj) => {
+        createPosts(obj);
     })
     .catch(err => {
         console.error(err);
