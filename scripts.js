@@ -40,7 +40,7 @@ function getKanjiLetter(){
         let randomNum = getRandomNum();
 
 
-        dailyKan.innerHTML = `<p>${letter[randomNum].kanji.character}</p>`;
+        dailyKan.innerHTML = `<h3>${letter[randomNum].kanji.character}</h3>`;
 }
 
 }
