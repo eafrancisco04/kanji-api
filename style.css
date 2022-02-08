@@ -1,5 +1,4 @@
 body{
-    height: 50%;
     margin: 0;
     box-sizing: border-box;
     background-color: rgb(185, 21, 46);
@@ -14,20 +13,23 @@ body{
 }
 h1 { 
   font-family: "Josefin Sans", helvetica, sans-serif;
-  color: rgb(185, 21, 46);
-  font-size: 10em;
-  display: grid;
+  color: rgb(17, 11, 12);
+  font-size: 4em;
   place-content: top center;
-  min-height:100vh;
-  margin:0;
+  margin: 0;
  }
 
 .content {
   background-color: white;
   padding: 1em;
   font-size: 1.2em;
-  height: 50em;
-  margin: auto;
+  max-width: 50%;
+  margin: 5rem auto;
   background-color: white;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   
 }
