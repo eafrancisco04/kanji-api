@@ -1,12 +1,12 @@
-const gameEl = document.getElementById("kanji")
-const getGame = document.getElementById("get-kanji")
+const dailyKan = document.getElementById("kanji")
+const getKan = document.getElementById("get-kanji")
 
-getGame.addEventListener("click", function() {
-    getGameData();
+getKan.addEventListener("click", function() {
+    getKanjiLetter();
 
 })
 
-function getGameData(){
+function getKanjiLetter(){
 
 //     fetch("https://jokeapi-v2.p.rapidapi.com/joke/Any?format=json&contains=C%2523&idRange=0-150&blacklistFlags=nsfw%2Cracist", {
 // 	"method": "GET",
@@ -26,14 +26,21 @@ function getGameData(){
     .then((response) => response.json())
     .then((obj) => {
         console.log("obj", obj);
-        createKanji(obj)
+        createKanji(obj);
     })
     .catch(err => {
         console.log(err);
     });
 
-    function createKanji(character) {
-        gameEl.innerHTML = `<h4>${character[0].kanji[character]}</h4>`;
+    const getRandomNum = function(numbers=31) {
+        return Math.floor( Math.random() * numbers ) - 1
+      }
+
+    function createKanji(letter) {
+        let randomNum = getRandomNum();
+
+
+        dailyKan.innerHTML = `<p>${letter[randomNum].kanji.character}</p>`;
 }
 
 }
