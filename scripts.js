@@ -1,5 +1,8 @@
-const dailyKan = document.getElementById("kanji")
-const getKan = document.getElementById("get-kanji")
+const dailyKan = document.getElementById(`kanji`)
+const getKan = document.getElementById(`get-kanji`)
+const meaning = document.getElementById(`meaning`)
+const read = document.getElementById(`read`)
+
 
 getKan.addEventListener("click", function() {
     getKanjiLetter();
@@ -8,15 +11,7 @@ getKan.addEventListener("click", function() {
 
 function getKanjiLetter(){
 
-//     fetch("https://jokeapi-v2.p.rapidapi.com/joke/Any?format=json&contains=C%2523&idRange=0-150&blacklistFlags=nsfw%2Cracist", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-host": "jokeapi-v2.p.rapidapi.com",
-// 		"x-rapidapi-key": "a7cd65d8f5msh29d7c6f25510201p18afacjsn0851cc9ec915"
-// 	}
-// })
-
-    fetch("https://kanjialive-api.p.rapidapi.com/api/public/search/advanced/?ks=16", {
+    fetch("https://kanjialive-api.p.rapidapi.com/api/public/kanji/all", {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "kanjialive-api.p.rapidapi.com",
@@ -32,15 +27,18 @@ function getKanjiLetter(){
         console.log(err);
     });
 
-    const getRandomNum = function(numbers=31) {
+    const getRandomNum = function(numbers=1235) {
         return Math.floor( Math.random() * numbers ) - 1
       }
 
     function createKanji(letter) {
         let randomNum = getRandomNum();
 
-
-        dailyKan.innerHTML = `<h3>${letter[randomNum].kanji.character}</h3>`;
+        dailyKan.innerText = `${letter[randomNum].kanji.character}`;
+        meaning.innerHTML = `<b>Meaning:</b> ${letter[randomNum].kanji.meaning.english}`;
+        read.innerHTML = `
+        <b>Kunyomi:</b> ${letter[randomNum].kanji.kunyomi.hiragana} <b>Onyomi:</b> ${letter[randomNum].kanji.onyomi.katakana}
+        `;
 }
 
 }

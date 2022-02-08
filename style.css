@@ -10,9 +10,10 @@ body{
     background-attachment: fixed; 
     background-size: cover;
 
+    font-family: "Josefin Sans", helvetica, sans-serif;
+
 }
 h1 { 
-  font-family: "Josefin Sans", helvetica, sans-serif;
   color: rgb(17, 11, 12);
   font-size: 4em;
   place-content: top center;
@@ -20,7 +21,7 @@ h1 {
  }
 
  h3 {
-  font-size: 2em;
+  font-size: 3em;
  }
 
 .content {
@@ -28,7 +29,7 @@ h1 {
   padding: 1em;
   font-size: 1.2em;
   max-width: 50%;
-  min-height: 50vh;
+  min-height: 80vh;
   margin: 5rem auto;
   background-color: white;
   
