@@ -34,7 +34,13 @@ function getKanjiLetter(){
     function createKanji(letter) {
         let randomNum = getRandomNum();
 
-        dailyKan.innerText = `${letter[randomNum].kanji.character}`;
+        dailyKan.innerHTML = `
+            <h3>${letter[randomNum].kanji.character}</h3>  
+            <video width="200" height="200" autoplay>
+            <source src="${letter[randomNum].kanji.video.mp3}">
+            </video>
+        
+        `;
         meaning.innerHTML = `<b>Meaning:</b> ${letter[randomNum].kanji.meaning.english}`;
         read.innerHTML = `
         <b>Kunyomi:</b> ${letter[randomNum].kanji.kunyomi.hiragana} <b>Onyomi:</b> ${letter[randomNum].kanji.onyomi.katakana}
