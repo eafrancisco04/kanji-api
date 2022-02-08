@@ -1,0 +1,13 @@
+body{
+    max-height: 50%;
+    margin: 0;
+    background-color: lightpink;
+
+
+    background-image: url("img/japan-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    background-size: cover;
+
+}
