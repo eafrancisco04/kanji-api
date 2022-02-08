@@ -27,7 +27,7 @@ function getKanjiLetter(){
         console.log(err);
     });
 
-    const getRandomNum = function(numbers=1235) {
+    const getRandomNum = function(numbers=1236) {
         return Math.floor( Math.random() * numbers ) - 1
       }
 
