@@ -24,8 +24,7 @@ h1 {
 
  h3 {
   font-size: 3em;
-  padding: 1em;
-  margin: 0;
+  margin: 0 1em;
  }
 
 .content {
@@ -34,13 +33,12 @@ h1 {
   font-size: 1.2em;
   max-width: 50%;
   min-height: 50vh;
-  margin: 5rem auto;
+  margin: 3rem auto;
   background-color: white;
   
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-around; */
   
 }
 
@@ -75,4 +73,12 @@ button:active {
 
 .info {
   align-self: stretch;
+}
+
+.kanji {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: .5em;
+
 }

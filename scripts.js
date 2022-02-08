@@ -36,8 +36,8 @@ function getKanjiLetter(){
 
         dailyKan.innerHTML = `
             <h3>${letter[randomNum].kanji.character}</h3>  
-            <video width="200" height="200" autoplay>
-            <source src="${letter[randomNum].kanji.video.mp3}">
+            <video width="150" height="150" autoplay loop>
+            <source src="${letter[randomNum].kanji.video.mp4}">
             </video>
         
         `;
