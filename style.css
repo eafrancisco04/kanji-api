@@ -20,19 +20,20 @@ h1 {
   place-content: top center;
   margin: 0;
  }
- @media screen and (max-width: 550px) {
+
+video {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width: 550px) {
   h1 {
     font-size: 2em;
   }
-  video {
-    width: 100px;
-    height: 100px;
-  }
 }
 
-
  h3 {
-  font-size: 3em;
+  font-size: 3.5em;
   margin: 0 1em;
  }
 
@@ -43,7 +44,7 @@ h1 {
   max-width: 50%;
   min-height: 50vh;
   margin: 3rem auto;
-  background-color: white;
+  
   
   display: flex;
   flex-direction: column;
@@ -90,4 +91,37 @@ button:active {
   justify-content: space-around;
   padding: .5em;
 
+}
+
+/*CSS for Form*/
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #b9152e;
+}
+
+.form-control span {
+  visibility: hidden;
+  position: absolute;
+  top: 36px;
+  right: 10px;
 }
